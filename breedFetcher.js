@@ -17,6 +17,7 @@ needle.get(`${apiUrl}?q=${breedName}`, (error, response, body) => {
   if (Array.isArray(body) && body.length > 0) {
     const firstBreed = body[0];
     console.log(`The first breed is: ${firstBreed.name}: ${firstBreed.description}`);
+  } else {
+    console.log(`Breed not found: "${breedName}"`);
   }
-  
 });
